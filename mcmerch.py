@@ -19,7 +19,13 @@ def main():
         total = price * 1.14975
 
 
-    print(f"The total price is {total: .2f}")
+    receipt(args.quantity, args.price, total, args.province)
+
+def receipt(quantity, price, total, province):
+    print(f"# of items: {quantity}")
+    print(f"Price per item: {price}")
+    print(f"Province purchased in: {province}")
+    print(f"Total price: {total}")
 
 if __name__ == '__main__':
     main()
